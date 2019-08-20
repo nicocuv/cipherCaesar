@@ -1,0 +1,45 @@
+{%- extends "base.html" %}
+
+{% block title %}Sample App for cipher functions{% endblock %}
+
+{% block content %}
+<form method="post">
+  <div class="container">
+    <div>
+      <h1>Welcome to my cipher/uncipher app!</h1>
+    </div>
+      <table>
+          <tr>
+              <td>
+                  <table>
+                      <tr>
+                          <td>Original text:</td>
+                          <td>{{ form.original_text }}</td>
+                      </tr>
+                      <tr>
+                          <td>Key value [1-26]:</td>
+                          <td>{{ form.key }}</td>
+                      </tr>
+                      <tr>
+                          <td>Action to perform:</td>
+                          <td>{{ form.rAction }}</td>
+                      </tr>
+                      <tr>
+                          <td>{{ form.submit }}</td>
+                          <td></td>
+                      </tr>
+                  </table>
+              </td>
+              <td>
+                  <table>
+                      <tr>
+                          <td>Result:</td>
+                          <td>{{ result }}</td>
+                      </tr>
+                  </table>
+              </td>
+          </tr>
+      </table>
+   </div>
+</form>
+{%- endblock %}
